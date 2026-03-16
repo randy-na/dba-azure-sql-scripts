@@ -1,7 +1,7 @@
 -- ============================================================
 -- Monthly | 05 - Missing Index Recommendations (score > 1000)
--- Run on: Primary (UK South)
--- REVIEW before creating indexes — DMVs reset on failover.
+-- Run on: Primary
+-- REVIEW before creating indexes - DMVs reset on failover.
 -- Allow at least 1 week of workload post-failover before acting.
 -- ============================================================
 SELECT TOP 20

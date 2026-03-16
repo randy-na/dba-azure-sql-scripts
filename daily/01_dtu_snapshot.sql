@@ -1,6 +1,6 @@
 -- ============================================================
 -- Daily | 01 - Current DTU Consumption Snapshot
--- Run on: Primary (UK South)
+-- Run on: Primary
 -- ============================================================
 SELECT
     end_time,

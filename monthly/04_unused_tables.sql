@@ -1,7 +1,7 @@
 -- ============================================================
 -- Monthly | 04 - Unused Tables (no user reads in stats cache)
--- Run on: Primary (UK South)
--- REVIEW before action — stats reset on restart and failover.
+-- Run on: Primary
+-- REVIEW before action - stats reset on restart and failover.
 -- Allow at least 1 week of workload post-failover before acting.
 -- ============================================================
 SELECT

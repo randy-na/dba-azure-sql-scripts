@@ -1,6 +1,6 @@
 -- ============================================================
 -- Monthly | 02 - Table Space Usage (top 20 by total size)
--- Run on: Primary (UK South)
+-- Run on: Primary
 -- ============================================================
 SELECT TOP 20
     SCHEMA_NAME(t.schema_id)          AS schema_name,

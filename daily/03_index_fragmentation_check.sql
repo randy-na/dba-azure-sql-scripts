@@ -1,6 +1,6 @@
 -- ============================================================
 -- Daily | 03 - Index Fragmentation Check (LIMITED scan)
--- Run on: Primary (UK South)
+-- Run on: Primary 
 -- Note: LIMITED mode keeps DTU impact low for a daily check.
 --       Fragmented indexes here are actioned in weekly\01_index_maintenance.sql
 -- ============================================================

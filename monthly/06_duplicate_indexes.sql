@@ -1,7 +1,7 @@
 -- ============================================================
 -- Monthly | 06 - Duplicate / Overlapping Indexes
--- Run on: Primary (UK South)
--- REVIEW before dropping — confirm with query workload first.
+-- Run on: Primary
+-- REVIEW before dropping - confirm with query workload first.
 -- ============================================================
 SELECT
     SCHEMA_NAME(t.schema_id)  AS schema_name,

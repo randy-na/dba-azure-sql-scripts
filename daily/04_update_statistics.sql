@@ -1,6 +1,6 @@
 -- ============================================================
 -- Daily | 04 - Update Statistics (stale tables only)
--- Run on: Primary (UK South) ONLY — will fail on read-only secondary
+-- Run on: Primary ONLY - will fail on read-only secondary
 -- Targets tables where < 80% of rows were sampled, catching
 -- stale stats between weekly sp_updatestats runs.
 -- ============================================================
