@@ -1,0 +1,740 @@
+###### 03 - Index Fragmentation Check (LIMITED scan)
+
+table_name	index_name	avg_fragmentation_in_percent	page_count
+RegistrationRequest	PK_RegistrationRequest_RegistrationRequestKey	99.3765586034913	802
+RegistrationRequest	IX_RegistrationRequest_RegistrationId	99.2231691681122	13259
+Registration	IX_Registration_Id_Status_CancellationReason	99.1707380549608	84533
+RegistrationRequest	IX_RegistrationRequest_RegistrationId	99.1331815176669	13613
+RegistrationRequest	IX_RegistrationRequest_RegistrationId	99.1072133996998	12657
+Registration	IX_Registration_Id_Status_CancellationReason	99.0923227136296	82959
+RegistrationRequest	IX_RegistrationRequest_RegistrationId	99.0625	8320
+Rmp	IX_Rmp_CommsHubLinkDeviceId_UPRN	99.0526982271576	41064
+Rmp	IX_Rmp_ActiveRegistrationId_PendingRegistrationId	99.0205171966015	53906
+Rmp	IX_Rmp_ActiveRegistrationId_PendingRegistrationId	99.0148746115205	51161
+Rmp	IX_Rmp_ActiveRegistrationId_PendingRegistrationId	98.9716578881364	47844
+Registration	IX_Registration_Id_Status_CancellationReason	98.9697969590731	106678
+Rmp	IX_Rmp_CommsHubLinkDeviceId_UPRN	98.9485873089393	43180
+Registration	IX_Registration_Mpxn_RegistrationStatus	98.9344985249242	98639
+Rmp	IX_Rmp_CommsHubLinkDeviceId_UPRN	98.8936455539509	38776
+Rmp	IX_Rmp_ActiveRegistrationId_PendingRegistrationId	98.8908778210663	28491
+Registration	IX_Registration_Id_Status_CancellationReason	98.8770605938104	66789
+Rmp	IX_Rmp_AddressSource_UPRN	98.8257782632441	36620
+Rmp	IX_Rmp_AddressSource_UPRN	98.8102353912276	35133
+Rmp	IX_Rmp_CommsHubLinkDeviceId_UPRN	98.7687915421332	22417
+Registration	IX_Registration_Mpxn_RegistrationStatus	98.7629459148447	100804
+Rmp	IX_Rmp_AddressSource_UPRN	98.682553012807	19052
+Rmp	IX_Rmp_AddressSource_UPRN	98.5700197238659	32448
+Rmp	IX_Rmp_Mpxn_RmpStatus	98.5272177804981	26141
+Registration	IX_Registration_Mpxn_RegistrationStatus	98.4521413747563	127208
+Rmp	IX_Rmp_Mpxn_RmpStatus	98.3417342391701	27378
+Registration	IX_Registration_Mpxn_RegistrationStatus	98.2511008807046	79936
+Rmp	IX_Rmp_Mpxn_RmpStatus	98.2382862578057	24181
+DicedCommsHubDataFromClaire	NULL	96.969696969697	228
+Rmp	IX_Rmp_Mpxn_RmpStatus	96.2418072793195	14342
+Rmp	IX_Rmp_NetworkProvisionMpid_RmpStatus	91.1793214862682	21665
+Rmp	IX_Rmp_NetworkProvisionMpid_RmpStatus	89.6607909939268	20253
+Rmp	IX_Rmp_NetworkProvisionMpid_RmpStatus	88.8008546247663	22466
+RegistrationRequest	IX_RegistrationRequest_RegistrationId	88.7508894495116	15459
+Rmp	IX_Rmp_NetworkProvisionMpid_RmpStatus	87.589013224822	11796
+Registration	IX_Registration_SupplierMpid_RegistrationStatus	84.3483071115956	61463
+Rmp	PK_Rmp_RmpKey	83.2051282051282	5460
+Registration	IX_Registration_SupplierMpid_RegistrationStatus	82.9873789159539	59979
+Registration	IX_Registration_Id_Status_CancellationReason	81.3913598940097	84536
+Rmp	IX_Rmp_AddressSource_UPRN	79.5315179168241	34409
+Rmp	IX_Rmp_ActiveRegistrationId_PendingRegistrationId	79.4925456429881	50172
+Registration	IX_Registration_Mpxn_RegistrationStatus	79.0273467236634	102462
+Rmp	IX_Rmp_Mpxn_RmpStatus	76.9914679850092	25082
+Rmp	IX_Rmp_CommsHubLinkDeviceId_UPRN	73.901518769701	41876
+Registration	IX_Registration_SupplierMpid_RegistrationStatus	72.7801418439716	77550
+Registration	IX_Registration_SupplierMpid_RegistrationStatus	70.2649975613721	49208
+Registration	PK_Registration_RegistrationKey	66.7338872307816	12397
+RmpMissed	NULL	64.6569646569647	3846
+RegistrationLink	AK_RegistrationLink_GainingRegistrationId_LosingRegistrationId	60.604342401728	1074060
+WebhookEventSubscription	IX_WebhookEventSubscription_EventSubscriptionId	56.3327032136106	529
+Alliance	IX_Alliance_AllianceId	55.8252427184466	206
+Rmp	IX_Rmp_NetworkProvisionMpid_RmpStatus	50.8436445444319	24003
+RelAddress	AK_RelAddress_DataHash_UprnKey	49.6204977229863	3782586
+WebhookEventMetricValue	AK_WebhookEventMetricValue_WebhookEventMetricKey_Mpid_Date	48.5500913641058	37761
+WebhookEventSubscription_Rejected	PK_WebhookEventSubscription_Rejected_WebhookEventSubscriptionKey	47.9256080114449	699
+Company_Rejected	PK_Company_Rejected_CompanyKey	46.4088397790055	181
+Registration	IX_Registration_SupplierMpid_RegistrationStatus	44.1088313230333	69061
+AA_COU_BulkInsert	NULL	39.3939393939394	522
+Uprn	AK_Uprn_Uprn	35.7736095558044	171456
+RelAddress	IX_RelAddress_UprnKey	33.1276733558395	335019
+WebhookEventSubscription	IX_WebhookEventSubscription_Mpid	32.5980392156863	408
+DicedUpTo4RmpsCommsHubDataFromClaire	NULL	26.9230769230769	202
+UprnAddress	AK_UprnAddress_UprnKey_Date_RelAddressKey	25.4814827635445	462218
+ONSPD	NULL	22.9778804886101	24212
+RegistrationRequest_Rejected	PK_RegistrationRequest_Rejected_RegistrationRequestKey	22.8668941979522	293
+MpidMarketShare	AK_MpidMarketShare_Date_SupplierMpid_SupplierRole	19.9029126213592	1442
+MarketParticipant_Rejected	PK_MarketParticipant_Rejected_MarketParticipantKey	19.5804195804196	286
+AA_COU_ProcessBulkInsert	NULL	19.047619047619	1004
+RegistrationRequest	IX_RegistrationRequest_RegistrationRequestStatus_SupplierMpid_Mpxn	18.8466257668712	8150
+RegistrationRequest	IX_RegistrationRequest_RegistrationRequestStatus_SupplierMpid_Mpxn	18.5434672089476	7868
+RegistrationRequest	IX_RegistrationRequest_RegistrationRequestStatus_SupplierMpid_Mpxn	17.5715829281469	7404
+RegistrationRequest	IX_RegistrationRequest_RegistrationRequestStatus_SupplierMpid_Mpxn	15.2011613438407	4822
+InterfaceMetricValue	AK_InterfaceMetricValue_InterfaceMetricKey_Date_Hour_Mpid	14.1085534698038	70638
+RegistrationRequest	IX_RegistrationRequest_RegistrationRequestStatus_SupplierMpid_Mpxn	13.7038400196295	8151
+OrchestrationAudit	PK_OrchestrationAudit_OrchestrationAuditKey	13.5775862068966	928
+Registration_Rejected	PK_Registration_Rejected_RegistrationKey	13.4412630452234	37370
+Registration	PK_Registration_LastUpdated_RegistrationId	12.9392507132769	3273273
+MpidMarketShare	PK_MpidMarketShare_Id	11.9202898550725	2760
+RegistrationRequest	PK_RegistrationRequest_LastUpdated_RegistrationRequestId	11.6036010566398	113189
+Registration	PK_Registration_LastUpdated_RegistrationId	11.5963828770638	1130180
+RegistrationRequest	PK_RegistrationRequest_LastUpdated_RegistrationRequestId	10.9707783975659	189312
+RegistrationRequest	PK_RegistrationRequest_LastUpdated_RegistrationRequestId	10.5443128082575	78668
+RegistrationRequest	PK_RegistrationRequest_LastUpdated_RegistrationRequestId	10.4739759859173	76122
+RegistrationRequest	PK_RegistrationRequest_LastUpdated_RegistrationRequestId	10.15970352644	120348
+RegistrationRequest	PK_RegistrationRequest_LastUpdated_RegistrationRequestId	10.1502748565966	200832
+
+
+##### 03 - Unused Indexes
+
+schema_name	table_name	index_name	type_desc	user_seeks	user_scans	user_lookups	user_updates
+dbo	RelAddress	IX_RelAddress_UprnKey	NONCLUSTERED	0	0	0	17380
+dbo	Rmp	IX_Rmp_AddressSource_UPRN	NONCLUSTERED	0	0	0	117
+dbo	Rmp	IX_Rmp_CommsHubLinkDeviceId_UPRN	NONCLUSTERED	0	0	0	117
+dbo	WebhookEventSubscription	IX_WebhookEventSubscription_EventSubscriptionId	NONCLUSTERED	0	0	0	2
+dbo	Alliance	IX_Alliance_AllianceId	NONCLUSTERED	NULL	NULL	NULL	NULL
+dbo	PermittedAllianceCombination	IX_PermittedAllianceCombination_NominatorValue_NomineeValue	NONCLUSTERED	NULL	NULL	NULL	NULL
+dbo	AA_COU_ProcessBulkInsert	IX_AA_COU_ProcessBulkInsert_DataHash	NONCLUSTERED	NULL	NULL	NULL	NULL
+dbo	AA_COU_ProcessBulkInsert	IX_AA_COU_ProcessBulkInsert_Uprn	NONCLUSTERED	NULL	NULL	NULL	NULL
+dbo	AA_COU_ProcessBulkInsert	IX_AA_COU_ProcessBulkInsert_Mpxn	NONCLUSTERED	NULL	NULL	NULL	NULL
+dbo	AA_UPRNADDR_ProcessBulkInsert	IX_AA_UPRNADDR_ProcessBulkInsert_Uprn	NONCLUSTERED	NULL	NULL	NULL	NULL
+dbo	ONSPD	IX_ONSPD_Postcode	NONCLUSTERED	NULL	NULL	NULL	NULL
+dbo	ONSPD	IX_ONSPD_Postcode_DateOfIntroduction_DateOfTermination	NONCLUSTERED	NULL	NULL	NULL	NULL
+
+
+##### 04 - Top 10 Queries by Total CPU
+
+avg_cpu_us	avg_elapsed_us	execution_count	avg_logical_reads	query_text
+4176550561	759998484	3	104543112	INSERT INTO #BaseDataTable (SupplierMpid, FuelType, RegistrationStatus)   SELECT    reg.SupplierMpid,    reg.FuelType,    reg.RegistrationStatus   FROM    Registration reg   WHERE    reg.LastUpdated = (     SELECT MAX(LastUpdated)     FROM Registration RegLastUpdated     WHERE RegLastUpdated.RegistrationId = reg.RegistrationId     AND RegLastUpdated.LastUpdated <= @toDateOffset     )
+2964055701	1111973220	1	94313244	SELECT     NetworkProvisionMpid AS [Network Provision MPID],    NetworkProvisionRole AS [Network Provision Role],    -- Count of RMP records with status 'Created'    ISNULL(SUM(CASE WHEN RmpStatus = 'C' THEN 1 ELSE 0 END), 0) AS Created,    -- Count of RMP records with status 'Operational'    ISNULL(SUM(CASE WHEN RmpStatus = 'O' THEN 1 ELSE 0 END), 0) AS Operational,    -- Count of RMP records with status 'Dormant'    ISNULL(SUM(CASE WHEN RmpStatus = 'D' THEN 1 ELSE 0 END), 0) AS Dormant,    -- Count of RMP records with status 'Terminated'    ISNULL(SUM(CASE WHEN RmpStatus = 'T' THEN 1 ELSE 0 END), 0) AS Terminated   FROM    Rmp   WHERE     LastUpdated <= @toDateOffset AND    (SELECT COUNT(*) FROM OPENJSON(JsonData, '$.AssetOwnershipMaps')) = 0 AND    LastUpdated =     (      SELECT       MAX(LastUpdated)      FROM       Rmp rmp2      WHERE        rmp2.Mpxn = Rmp.Mpxn AND       rmp2.LastUpdated <= @toDateOffset     )   -- Group results by Network Provision MPID and Role to aggregate status counts   GROUP BY    NetworkProvisionMpid,    NetworkProvisionRole   ORDER BY    NetworkProvisionMpid,    NetworkProvisionRole   OPTION (USE HINT('ENABLE_PARALLEL_PLAN_PREFERENCE'), RECOMPILE)
+669273645	1294631915	1	5062539	INSERT INTO #BaseDataTable (NetworkProvisionMpid, NetworkProvisionRole, RmpStatus)   SELECT     NetworkProvisionMpid,    NetworkProvisionRole,    RmpStatus   FROM    Rmp   WHERE    LastUpdated <= @toDateOffset AND    LastUpdated =     (      SELECT       MAX(LastUpdated)      FROM       Rmp rmp2      WHERE        rmp2.Mpxn = Rmp.Mpxn AND       rmp2.LastUpdated <= @toDateOffset     )
+500229830	1151982860	1	18877608	INSERT INTO #TerminatedRMPActiveRegistrationReportOutput(    SupplierMpid,    FuelType,    TotalTerminated   )    SELECT     ActiveRegistration.SupplierMpid,    ActiveRegistration.FuelType,    COUNT(DISTINCT ActiveRegistration.Mpxn)   FROM    Rmp AS TerminatedRmp    INNER JOIN      Registration as ActiveRegistration    ON      ActiveRegistration.RegistrationId = TerminatedRmp.ActiveRegistrationId     AND     ActiveRegistration.RegistrationStatus = 'Active'    AND     ActiveRegistration.LastUpdated = (     SELECT MAX(LastUpdated)      FROM Registration ActiveRegistrationLastUpdated     WHERE ActiveRegistrationLastUpdated.RegistrationId = ActiveRegistration.RegistrationId     AND ActiveRegistrationLastUpdated.LastUpdated <= @toDateOffset     )    WHERE      ActiveRegistration.LastUpdated <= @toDateOffset     AND TerminatedRmp.RmpStatus = 'T'     AND TerminatedRmp.LastUpdated = (      SELECT MAX(LastUpdated)       FROM Rmp RmpLastUpdated      WHERE RmpLastUpdated.Mpxn = TerminatedRmp.Mpxn      AND RmpLastUpdated.LastUpdated <= @toDateOffset     )    GROUP BY ActiveRegistration.SupplierMpid,    ActiveRegistration.FuelType
+24487476	12156924	11	371507	SELECT     SupplierMpid,    FuelType,    COUNT(*) AS Total   INTO    #Active   FROM     #baseDataTable   WHERE    RegistrationStatus = 'Active'   GROUP BY    SupplierMpid,    FuelType
+22521701	6221066	11	371513	SELECT     SupplierMpid,    FuelType,    COUNT(*) AS Total   INTO    #Inactive   FROM     #baseDataTable   WHERE    RegistrationStatus = 'Inactive'   GROUP BY    SupplierMpid,    FuelType
+221208355	28640669	1	8469424	UPDATE change    SET  change.IncludeInExport = 1    FROM #RmpWithChange change    JOIN Rmp curr ON curr.Mpxn = change.Mpxn AND curr.LastUpdated = change.LatestLastUpdated    LEFT JOIN Rmp prev ON prev.Mpxn = change.Mpxn AND prev.LastUpdated = change.PreviousLastUpdated    WHERE    (     COALESCE(prev.RmpStatus, '') != COALESCE(curr.RmpStatus, '')     OR     COALESCE(prev.NetworkProvisionMpid, '') != COALESCE(curr.NetworkProvisionMpid, '')     OR     COALESCE(prev.CommsHubLinkDeviceId, '') != COALESCE(curr.CommsHubLinkDeviceId, '')     OR     COALESCE(JSON_QUERY(prev.JsonData, '$.MplAddress'), '') != COALESCE(JSON_QUERY(curr.JsonData, '$.MplAddress'), '')     OR     COALESCE(JSON_QUERY(prev.JsonData, '$.RelAddress'), '') != COALESCE(JSON_QUERY(curr.JsonData, '$.RelAddress'), '')     OR     COALESCE(JSON_QUERY(prev.JsonData, '$.MeAddress'), '') != COALESCE(JSON_QUERY(curr.JsonData, '$.MeAddress'), '')    )
+16323247	12628042	11	371523	SELECT     SupplierMpid,    FuelType,    COUNT(*) AS Total   INTO    #Cancelled   FROM     #baseDataTable   WHERE    RegistrationStatus = 'Cancelled'   GROUP BY    SupplierMpid,    FuelType
+16142490	9989017	11	371502	SELECT     SupplierMpid,    FuelType,    COUNT(*) AS Total   INTO    #Confirmed   FROM     #baseDataTable   WHERE    RegistrationStatus = 'Confirmed'   GROUP BY    SupplierMpid,    FuelType
+16122639	9154022	11	371523	SELECT     SupplierMpid,    FuelType,    COUNT(*) AS Total   INTO    #Pending   FROM     #baseDataTable   WHERE    RegistrationStatus = 'Pending'   GROUP BY    SupplierMpid,    FuelType
+
+
+##### 01 - Database Size and Space Usage
+
+data_size_Gb	log_size_Gb	total_size_Gb
+2132	19	2152
+
+max_data_size_Gb	max_log_size_Gb	max_total_size_Gb
+2560	1024	3583
+
+
+##### 02 - Table Space Usage (top 20 by total size)
+
+schema_name	table_name	row_count	total_gb	used_gb	data_gb
+dbo	Rmp	57423379	147.709976196289	147.647529601562	146.304824829101
+dbo	Registration	57425957	69.005905151367	69.005607604492	68.501602172851
+dbo	RelAddress	68992968	29.614585875976	29.610321044921	29.497535705078
+dbo	Registration	18528227	26.674629210937	26.658317565429	26.255416870117
+dbo	Registration	17509112	25.367126464843	25.354957580078	24.973091125000
+dbo	Registration	17158538	24.184028625000	24.148986816406	23.784255981445
+dbo	Registration	16422690	23.455848693359	23.421463012695	23.066261291015
+dbo	Registration	16767038	23.297554015625	23.279823302734	22.927383422851
+dbo	Registration	14010659	21.395889282226	21.357658385742	21.033584594726
+dbo	Rmp	7911180	20.403457641601	20.403022765625	20.314712524414
+dbo	Registration	14209525	20.348999023437	20.337570190429	20.031509399414
+dbo	Registration	12865238	19.471855163085	19.443695068359	19.148498535156
+dbo	Rmp	6758384	18.041038512695	18.029426574218	17.863998413085
+dbo	Registration	12293924	17.380561828125	17.372314453125	17.108917236328
+dbo	Registration	11829079	17.123992919921	17.122566222656	16.862739562500
+dbo	Rmp	6333103	17.120674132812	17.111129760742	16.954429625976
+dbo	Rmp	6299114	16.941909790039	16.923469542968	16.768676757812
+dbo	Rmp	6543324	16.764724731445	16.764343261718	16.693649291992
+dbo	Registration	12011329	16.346267700195	16.326087951171	16.078407287109
+dbo	Rmp	5796861	15.891395568359	15.880851745117	15.735702514648
+
+
+#### 03 - DTU Consumption Trend (daily max, last 30 days)
+day	max_cpu_pct	max_io_pct	max_log_pct	max_dtu_pct	avg_dtu_pct
+2026-03-16	23.02	5.62	40.16	40.16	0.987929
+
+
+#### 04 - Unused Tables (no user reads in stats cache)
+
+schema_name	table_name	row_count	last_seek	last_scan	last_lookup	last_update
+dbo	UprnAddress	140731598	NULL	NULL	NULL	2026-03-13 02:04:26.873
+dbo	ONSPD	2717743	NULL	NULL	NULL	NULL
+raw	RmpTemp	642981	NULL	NULL	NULL	NULL
+raw	Alliance_Rejected	41291	NULL	NULL	NULL	NULL
+dbo	AA_COU_BulkInsert	16823	NULL	NULL	NULL	NULL
+dbo	AA_COU_ProcessBulkInsert	16823	NULL	NULL	NULL	NULL
+dbo	DicedCommsHubDataFromClaire	16375	NULL	NULL	NULL	NULL
+dbo	DicedUpTo4RmpsCommsHubDataFromClaire	16375	NULL	NULL	NULL	NULL
+dbo	Alliance	16249	NULL	NULL	NULL	NULL
+raw	WebhookEventSubscription_Rejected	8766	NULL	NULL	NULL	2026-03-16 12:03:09.247
+raw	RmpMissed	7691	NULL	NULL	NULL	NULL
+raw	MarketParticipant_Rejected	3802	NULL	NULL	NULL	NULL
+raw	RegistrationRequest_Rejected	3225	NULL	NULL	NULL	2026-03-16 12:03:09.607
+raw	Company_Rejected	3197	NULL	NULL	NULL	NULL
+dbo	MpidMarketShareBackup	1206	NULL	NULL	NULL	NULL
+raw	CssContext	100	NULL	NULL	NULL	NULL
+raw	MarketRole_Rejected	70	NULL	NULL	NULL	NULL
+raw	PermittedAllianceCombination_Rejected	12	NULL	NULL	NULL	NULL
+dbo	ProcessingCalendar	11	NULL	NULL	NULL	NULL
+dbo	RetailMarket	6	NULL	NULL	NULL	NULL
+dbo	PerformanceMeasure	5	NULL	NULL	NULL	NULL
+dbo	__RefactorLog	5	NULL	NULL	NULL	NULL
+dbo	PermittedAllianceCombination	3	NULL	NULL	NULL	NULL
+raw	ProcessingCalendar_PossibleDuplicates	3	NULL	NULL	NULL	NULL
+raw	RetailMarket_PossibleDuplicates	2	NULL	NULL	NULL	NULL
+raw	ProcessingCalendar_Rejected	1	NULL	NULL	NULL	NULL
+raw	RetailMarket_Rejected	0	NULL	NULL	NULL	NULL
+dbo	AA_UPRNADDR_BulkInsert	0	NULL	NULL	NULL	NULL
+dbo	AA_UPRNADDR_ProcessBulkInsert	0	NULL	NULL	NULL	NULL
+dbo	ONSPD_BulkInsert	0	NULL	NULL	NULL	NULL
+
+
+#####  06 - Duplicate / Overlapping Indexes
+
+schema_name	table_name	index1	index2	type_desc
+dbo	ONSPD	IX_ONSPD_Postcode	IX_ONSPD_Postcode_DateOfIntroduction_DateOfTermination	NONCLUSTERED
+dbo	Registration	IX_Registration_Id_Status_CancellationReason	IX_Registration_Mpxn_RegistrationStatus	NONCLUSTERED
+dbo	Registration	IX_Registration_Id_Status_CancellationReason	IX_Registration_OrchestrationAuditKey	NONCLUSTERED
+dbo	Registration	IX_Registration_Id_Status_CancellationReason	IX_Registration_SupplierMpid_RegistrationStatus	NONCLUSTERED
+dbo	Registration	IX_Registration_Mpxn_RegistrationStatus	IX_Registration_OrchestrationAuditKey	NONCLUSTERED
+dbo	Registration	IX_Registration_Mpxn_RegistrationStatus	IX_Registration_SupplierMpid_RegistrationStatus	NONCLUSTERED
+dbo	Registration	IX_Registration_OrchestrationAuditKey	IX_Registration_SupplierMpid_RegistrationStatus	NONCLUSTERED
+dbo	RegistrationRequest	IX_RegistrationRequest_RegistrationId	IX_RegistrationRequest_RegistrationRequestStatus_SupplierMpid_Mpxn	NONCLUSTERED
+dbo	RelAddress	AK_RelAddress_DataHash_UprnKey	IX_RelAddress_UprnKey	NONCLUSTERED
+dbo	Rmp	IX_Rmp_ActiveRegistrationId_PendingRegistrationId	IX_Rmp_AddressSource_UPRN	NONCLUSTERED
+dbo	Rmp	IX_Rmp_ActiveRegistrationId_PendingRegistrationId	IX_Rmp_Mpxn_RmpStatus	NONCLUSTERED
+dbo	Rmp	IX_Rmp_ActiveRegistrationId_PendingRegistrationId	IX_Rmp_NetworkProvisionMpid_RmpStatus	NONCLUSTERED
+dbo	Rmp	IX_Rmp_ActiveRegistrationId_PendingRegistrationId	IX_Rmp_CommsHubLinkDeviceId_UPRN	NONCLUSTERED
+dbo	Rmp	IX_Rmp_AddressSource_UPRN	IX_Rmp_Mpxn_RmpStatus	NONCLUSTERED
+dbo	Rmp	IX_Rmp_AddressSource_UPRN	IX_Rmp_NetworkProvisionMpid_RmpStatus	NONCLUSTERED
+dbo	Rmp	IX_Rmp_AddressSource_UPRN	IX_Rmp_CommsHubLinkDeviceId_UPRN	NONCLUSTERED
+dbo	Rmp	IX_Rmp_Mpxn_RmpStatus	IX_Rmp_NetworkProvisionMpid_RmpStatus	NONCLUSTERED
+dbo	Rmp	IX_Rmp_Mpxn_RmpStatus	IX_Rmp_CommsHubLinkDeviceId_UPRN	NONCLUSTERED
+dbo	Rmp	IX_Rmp_NetworkProvisionMpid_RmpStatus	IX_Rmp_CommsHubLinkDeviceId_UPRN	NONCLUSTERED
+
+
+
+
+
+
+###### DDL
+
+/****** Object:  Table [dbo].[Company]    Script Date: 16/03/2026 12:45:38 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Company](
+	[RegistrationNumber]  AS (CONVERT([varchar](20),json_value([JsonData],'$.RegistrationNumber'))),
+	[LastUpdated] [datetimeoffset](7) NOT NULL,
+	[JsonData] [varchar](4000) NOT NULL,
+	[RecordCreatedOn] [datetime2](2) NOT NULL,
+	[OrchestrationAuditKey] [int] NOT NULL,
+	[Etag]  AS (CONVERT([varchar](38),json_value([JsonData],'$._etag')))
+) ON [PRIMARY]
+GO
+SET ARITHABORT ON
+SET CONCAT_NULL_YIELDS_NULL ON
+SET QUOTED_IDENTIFIER ON
+SET ANSI_NULLS ON
+SET ANSI_PADDING ON
+SET ANSI_WARNINGS ON
+SET NUMERIC_ROUNDABORT OFF
+GO
+/****** Object:  Index [PK_Company_LastUpdated_RegistrationNumber]    Script Date: 16/03/2026 12:45:38 ******/
+CREATE UNIQUE CLUSTERED INDEX [PK_Company_LastUpdated_RegistrationNumber] ON [dbo].[Company]
+(
+	[LastUpdated] ASC,
+	[RegistrationNumber] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[ONSPD]    Script Date: 16/03/2026 12:45:38 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[ONSPD](
+	[Postcode] [nvarchar](20) NOT NULL,
+	[DateOfIntroduction] [datetime2](2) NOT NULL,
+	[DateOfTermination] [datetime2](2) NULL,
+	[Latitude] [decimal](10, 7) NULL,
+	[Longitude] [decimal](10, 7) NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[OrchestrationAudit]    Script Date: 16/03/2026 12:45:38 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[OrchestrationAudit](
+	[OrchestrationAuditKey] [int] IDENTITY(1,1) NOT NULL,
+	[StartedOn] [datetime2](2) NOT NULL,
+	[RunId] [varchar](40) NOT NULL,
+	[FinishedOn] [datetime2](2) NULL,
+	[Outcome] [varchar](10) NULL,
+	[AdditionalInfo] [varchar](6000) NULL,
+ CONSTRAINT [PK_OrchestrationAudit_OrchestrationAuditKey] PRIMARY KEY CLUSTERED 
+(
+	[OrchestrationAuditKey] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Registration]    Script Date: 16/03/2026 12:45:38 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Registration](
+	[RegistrationId] [varchar](38) NOT NULL,
+	[LastUpdated] [datetimeoffset](7) NOT NULL,
+	[RegistrationStatus] [varchar](20) NOT NULL,
+	[RegistrationStatusFromDate] [datetimeoffset](7) NOT NULL,
+	[SupplierMpid] [varchar](10) NOT NULL,
+	[SupplyStartDate] [datetimeoffset](7) NOT NULL,
+	[FuelType] [char](1) NOT NULL,
+	[Mpxn] [varchar](20) NOT NULL,
+	[DomesticPremisesInd] [bit] NOT NULL,
+	[ChangeOfOccupancyInd] [bit] NOT NULL,
+	[ErroneousSwitchResolutionInd] [bit] NOT NULL,
+	[CancellationReason] [varchar](20) NULL,
+	[JsonData] [varchar](4000) NOT NULL,
+	[RecordCreatedOn] [datetime2](2) NOT NULL,
+	[OrchestrationAuditKey] [int] NOT NULL,
+	[ObjectionWindowEndDate]  AS (CONVERT([datetimeoffset](7),json_value([JsonData],'$.ObjectionWindowEndDate'))),
+	[SupplierRole]  AS (CONVERT([varchar](10),json_value([JsonData],'$.SupplierRole'))),
+	[Etag]  AS (CONVERT([varchar](38),json_value([JsonData],'$._etag'))),
+	[RegistrationInitiator]  AS (CONVERT([varchar](20),json_value([JsonData],'$.RegistrationInitiator')))
+) ON [psPartition_LastUpdated]([LastUpdated])
+GO
+SET ANSI_PADDING ON
+GO
+/****** Object:  Index [PK_Registration_LastUpdated_RegistrationId]    Script Date: 16/03/2026 12:45:38 ******/
+CREATE UNIQUE CLUSTERED INDEX [PK_Registration_LastUpdated_RegistrationId] ON [dbo].[Registration]
+(
+	[LastUpdated] ASC,
+	[RegistrationId] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [psPartition_LastUpdated]([LastUpdated])
+GO
+/****** Object:  Table [dbo].[RegistrationLink]    Script Date: 16/03/2026 12:45:38 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[RegistrationLink](
+	[RegistrationLinkKey] [int] IDENTITY(1,1) NOT NULL,
+	[LosingRegistrationId] [varchar](38) NULL,
+	[GainingRegistrationId] [varchar](38) NOT NULL,
+	[OrchestrationAuditKey] [int] NOT NULL,
+	[RecordCreatedOn] [datetime2](2) NOT NULL,
+ CONSTRAINT [PK_RegistrationLink_RegistrationLinkKey] PRIMARY KEY CLUSTERED 
+(
+	[RegistrationLinkKey] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY],
+ CONSTRAINT [AK_RegistrationLink_GainingRegistrationId_LosingRegistrationId] UNIQUE NONCLUSTERED 
+(
+	[GainingRegistrationId] ASC,
+	[LosingRegistrationId] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, FILLFACTOR = 80, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[RegistrationRequest]    Script Date: 16/03/2026 12:45:38 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[RegistrationRequest](
+	[RegistrationRequestId] [varchar](38) NOT NULL,
+	[LastUpdated] [datetimeoffset](7) NOT NULL,
+	[RegistrationRequestStatus] [varchar](20) NOT NULL,
+	[RegistrationId] [varchar](38) NOT NULL,
+	[AttemptedRegistration_Mpxn] [varchar](20) NULL,
+	[AttemptedRegistration_SupplierMpid] [varchar](10) NULL,
+	[LastUpdatedBy]  AS (CONVERT([varchar](20),json_value([JsonData],'$.LastUpdatedBy'))),
+	[JsonData] [varchar](max) NOT NULL,
+	[RecordCreatedOn] [datetime2](2) NOT NULL,
+	[OrchestrationAuditKey] [int] NOT NULL,
+	[Etag]  AS (CONVERT([varchar](38),json_value([JsonData],'$._etag')))
+) ON [psPartition_LastUpdated]([LastUpdated])
+GO
+SET ANSI_PADDING ON
+GO
+/****** Object:  Index [PK_RegistrationRequest_LastUpdated_RegistrationRequestId]    Script Date: 16/03/2026 12:45:38 ******/
+CREATE UNIQUE CLUSTERED INDEX [PK_RegistrationRequest_LastUpdated_RegistrationRequestId] ON [dbo].[RegistrationRequest]
+(
+	[LastUpdated] ASC,
+	[RegistrationRequestId] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [psPartition_LastUpdated]([LastUpdated])
+GO
+/****** Object:  Table [dbo].[RelAddress]    Script Date: 16/03/2026 12:45:38 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[RelAddress](
+	[RelAddressKey] [int] IDENTITY(1,1) NOT NULL,
+	[UprnKey] [int] NOT NULL,
+	[SecondaryName] [nvarchar](255) NULL,
+	[PrimaryName] [nvarchar](255) NULL,
+	[Street1] [nvarchar](255) NULL,
+	[Street2] [nvarchar](255) NULL,
+	[Locality1] [nvarchar](255) NULL,
+	[Locality2] [nvarchar](255) NULL,
+	[Town] [nvarchar](255) NULL,
+	[Postcode] [nvarchar](20) NULL,
+	[LogicalStatus] [int] NULL,
+	[Language] [nvarchar](10) NULL,
+	[Organisation] [nvarchar](255) NULL,
+	[AddressType] [int] NULL,
+	[Classification] [nvarchar](50) NULL,
+	[Latitude] [decimal](10, 7) NULL,
+	[Longitude] [decimal](10, 7) NULL,
+	[DataHash] [nvarchar](255) NOT NULL,
+	[AddressSourceKey] [int] NOT NULL,
+	[Created] [datetime2](2) NOT NULL,
+ CONSTRAINT [PK_RelAddress_RelAddressKey] PRIMARY KEY CLUSTERED 
+(
+	[RelAddressKey] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY],
+ CONSTRAINT [AK_RelAddress_DataHash_UprnKey] UNIQUE NONCLUSTERED 
+(
+	[DataHash] ASC,
+	[UprnKey] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[RetailMarket]    Script Date: 16/03/2026 12:45:38 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[RetailMarket](
+	[LastUpdated] [datetimeoffset](7) NOT NULL,
+	[JsonData] [varchar](4000) NOT NULL,
+	[RecordCreatedOn] [datetime2](2) NOT NULL,
+	[OrchestrationAuditKey] [int] NOT NULL,
+	[Etag]  AS (CONVERT([varchar](38),json_value([JsonData],'$._etag')))
+) ON [PRIMARY]
+GO
+/****** Object:  Index [PK_RetailMarket_LastUpdated]    Script Date: 16/03/2026 12:45:38 ******/
+CREATE UNIQUE CLUSTERED INDEX [PK_RetailMarket_LastUpdated] ON [dbo].[RetailMarket]
+(
+	[LastUpdated] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Rmp]    Script Date: 16/03/2026 12:45:38 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Rmp](
+	[Mpxn] [varchar](20) NOT NULL,
+	[FuelType] [char](1) NOT NULL,
+	[LastUpdated] [datetimeoffset](7) NOT NULL,
+	[RmpStatus] [char](1) NOT NULL,
+	[NetworkProvisionMpid] [varchar](10) NOT NULL,
+	[ActiveRegistrationId] [varchar](38) NULL,
+	[PendingRegistrationId] [varchar](38) NULL,
+	[RelAddress_AddressSource] [varchar](10) NULL,
+	[RelAddress_UPRN] [bigint] NULL,
+	[JsonData] [nvarchar](max) NOT NULL,
+	[RecordCreatedOn] [datetime2](2) NOT NULL,
+	[OrchestrationAuditKey] [int] NOT NULL,
+	[RmpStatusFromDate]  AS (CONVERT([datetimeoffset](7),json_value([JsonData],'$.RmpStatusFromDate'))),
+	[Etag]  AS (CONVERT([varchar](38),json_value([JsonData],'$._etag'))),
+	[NetworkProvisionRole]  AS (CONVERT([varchar](10),json_value([JsonData],'$.NetworkProvisionRole'))),
+	[CommsHubLinkDeviceId]  AS (CONVERT([varchar](38),json_value([JsonData],'$.CommsHubLinkDeviceId')))
+) ON [psPartition_LastUpdated]([LastUpdated])
+GO
+SET ANSI_PADDING ON
+GO
+/****** Object:  Index [PK_Rmp_LastUpdated_Mpxn]    Script Date: 16/03/2026 12:45:38 ******/
+CREATE UNIQUE CLUSTERED INDEX [PK_Rmp_LastUpdated_Mpxn] ON [dbo].[Rmp]
+(
+	[LastUpdated] ASC,
+	[Mpxn] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [psPartition_LastUpdated]([LastUpdated])
+GO
+/****** Object:  Table [dbo].[Uprn]    Script Date: 16/03/2026 12:45:38 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Uprn](
+	[UprnKey] [int] IDENTITY(1,1) NOT NULL,
+	[Uprn] [bigint] NOT NULL,
+	[Created] [datetime2](2) NOT NULL,
+ CONSTRAINT [PK_Uprn_UprnKey] PRIMARY KEY CLUSTERED 
+(
+	[UprnKey] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY],
+ CONSTRAINT [AK_Uprn_Uprn] UNIQUE NONCLUSTERED 
+(
+	[Uprn] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[UprnAddress]    Script Date: 16/03/2026 12:45:38 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[UprnAddress](
+	[UprnAddressKey] [int] IDENTITY(1,1) NOT NULL,
+	[UprnKey] [int] NOT NULL,
+	[Date] [datetime2](7) NOT NULL,
+	[RelAddressKey] [int] NOT NULL,
+	[AddressSourceKey] [int] NOT NULL,
+	[Created] [datetime2](2) NOT NULL,
+ CONSTRAINT [PK_UprnAddress_UprnAddressKey] PRIMARY KEY CLUSTERED 
+(
+	[UprnAddressKey] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY],
+ CONSTRAINT [AK_UprnAddress_UprnKey_Date_RelAddressKey] UNIQUE NONCLUSTERED 
+(
+	[UprnKey] ASC,
+	[Date] ASC,
+	[RelAddressKey] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ARITHABORT ON
+SET CONCAT_NULL_YIELDS_NULL ON
+SET QUOTED_IDENTIFIER ON
+SET ANSI_NULLS ON
+SET ANSI_PADDING ON
+SET ANSI_WARNINGS ON
+SET NUMERIC_ROUNDABORT OFF
+GO
+/****** Object:  Index [IX_Company_RegistrationNumber]    Script Date: 16/03/2026 12:45:38 ******/
+CREATE NONCLUSTERED INDEX [IX_Company_RegistrationNumber] ON [dbo].[Company]
+(
+	[RegistrationNumber] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, DROP_EXISTING = OFF, ONLINE = OFF, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+SET ANSI_PADDING ON
+GO
+/****** Object:  Index [IX_ONSPD_Postcode]    Script Date: 16/03/2026 12:45:38 ******/
+CREATE NONCLUSTERED INDEX [IX_ONSPD_Postcode] ON [dbo].[ONSPD]
+(
+	[Postcode] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, DROP_EXISTING = OFF, ONLINE = OFF, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+SET ANSI_PADDING ON
+GO
+/****** Object:  Index [IX_ONSPD_Postcode_DateOfIntroduction_DateOfTermination]    Script Date: 16/03/2026 12:45:38 ******/
+CREATE NONCLUSTERED INDEX [IX_ONSPD_Postcode_DateOfIntroduction_DateOfTermination] ON [dbo].[ONSPD]
+(
+	[Postcode] ASC,
+	[DateOfIntroduction] ASC,
+	[DateOfTermination] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, DROP_EXISTING = OFF, ONLINE = OFF, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+SET ANSI_PADDING ON
+GO
+/****** Object:  Index [IX_Registration_Id_Status_CancellationReason]    Script Date: 16/03/2026 12:45:38 ******/
+CREATE NONCLUSTERED INDEX [IX_Registration_Id_Status_CancellationReason] ON [dbo].[Registration]
+(
+	[RegistrationId] ASC,
+	[RegistrationStatus] ASC,
+	[CancellationReason] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, DROP_EXISTING = OFF, ONLINE = OFF, FILLFACTOR = 80, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [psPartition_LastUpdated]([LastUpdated])
+GO
+SET ANSI_PADDING ON
+GO
+/****** Object:  Index [IX_Registration_Mpxn_RegistrationStatus]    Script Date: 16/03/2026 12:45:38 ******/
+CREATE NONCLUSTERED INDEX [IX_Registration_Mpxn_RegistrationStatus] ON [dbo].[Registration]
+(
+	[Mpxn] ASC,
+	[RegistrationStatus] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, DROP_EXISTING = OFF, ONLINE = OFF, FILLFACTOR = 80, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [psPartition_LastUpdated]([LastUpdated])
+GO
+/****** Object:  Index [IX_Registration_OrchestrationAuditKey]    Script Date: 16/03/2026 12:45:38 ******/
+CREATE NONCLUSTERED INDEX [IX_Registration_OrchestrationAuditKey] ON [dbo].[Registration]
+(
+	[OrchestrationAuditKey] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, DROP_EXISTING = OFF, ONLINE = OFF, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [psPartition_LastUpdated]([LastUpdated])
+GO
+SET ANSI_PADDING ON
+GO
+/****** Object:  Index [IX_Registration_SupplierMpid_RegistrationStatus]    Script Date: 16/03/2026 12:45:38 ******/
+CREATE NONCLUSTERED INDEX [IX_Registration_SupplierMpid_RegistrationStatus] ON [dbo].[Registration]
+(
+	[SupplierMpid] ASC,
+	[RegistrationStatus] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, DROP_EXISTING = OFF, ONLINE = OFF, FILLFACTOR = 80, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [psPartition_LastUpdated]([LastUpdated])
+GO
+SET ANSI_PADDING ON
+GO
+/****** Object:  Index [IX_RegistrationRequest_RegistrationId]    Script Date: 16/03/2026 12:45:38 ******/
+CREATE NONCLUSTERED INDEX [IX_RegistrationRequest_RegistrationId] ON [dbo].[RegistrationRequest]
+(
+	[RegistrationId] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, DROP_EXISTING = OFF, ONLINE = OFF, FILLFACTOR = 80, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [psPartition_LastUpdated]([LastUpdated])
+GO
+SET ANSI_PADDING ON
+GO
+/****** Object:  Index [IX_RegistrationRequest_RegistrationRequestStatus_SupplierMpid_Mpxn]    Script Date: 16/03/2026 12:45:38 ******/
+CREATE NONCLUSTERED INDEX [IX_RegistrationRequest_RegistrationRequestStatus_SupplierMpid_Mpxn] ON [dbo].[RegistrationRequest]
+(
+	[RegistrationRequestStatus] ASC,
+	[AttemptedRegistration_SupplierMpid] ASC,
+	[AttemptedRegistration_Mpxn] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, DROP_EXISTING = OFF, ONLINE = OFF, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [psPartition_LastUpdated]([LastUpdated])
+GO
+/****** Object:  Index [IX_RelAddress_UprnKey]    Script Date: 16/03/2026 12:45:38 ******/
+CREATE NONCLUSTERED INDEX [IX_RelAddress_UprnKey] ON [dbo].[RelAddress]
+(
+	[UprnKey] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, DROP_EXISTING = OFF, ONLINE = OFF, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+SET ANSI_PADDING ON
+GO
+/****** Object:  Index [IX_Rmp_ActiveRegistrationId_PendingRegistrationId]    Script Date: 16/03/2026 12:45:38 ******/
+CREATE NONCLUSTERED INDEX [IX_Rmp_ActiveRegistrationId_PendingRegistrationId] ON [dbo].[Rmp]
+(
+	[ActiveRegistrationId] ASC,
+	[PendingRegistrationId] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, DROP_EXISTING = OFF, ONLINE = OFF, FILLFACTOR = 70, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [psPartition_LastUpdated]([LastUpdated])
+GO
+SET ANSI_PADDING ON
+GO
+/****** Object:  Index [IX_Rmp_AddressSource_UPRN]    Script Date: 16/03/2026 12:45:38 ******/
+CREATE NONCLUSTERED INDEX [IX_Rmp_AddressSource_UPRN] ON [dbo].[Rmp]
+(
+	[RelAddress_AddressSource] ASC,
+	[RelAddress_UPRN] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, DROP_EXISTING = OFF, ONLINE = OFF, FILLFACTOR = 70, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [psPartition_LastUpdated]([LastUpdated])
+GO
+SET ARITHABORT ON
+SET CONCAT_NULL_YIELDS_NULL ON
+SET QUOTED_IDENTIFIER ON
+SET ANSI_NULLS ON
+SET ANSI_PADDING ON
+SET ANSI_WARNINGS ON
+SET NUMERIC_ROUNDABORT OFF
+GO
+/****** Object:  Index [IX_Rmp_CommsHubLinkDeviceId_UPRN]    Script Date: 16/03/2026 12:45:38 ******/
+CREATE NONCLUSTERED INDEX [IX_Rmp_CommsHubLinkDeviceId_UPRN] ON [dbo].[Rmp]
+(
+	[CommsHubLinkDeviceId] ASC,
+	[RelAddress_UPRN] ASC
+)
+INCLUDE([FuelType],[RmpStatus]) WITH (STATISTICS_NORECOMPUTE = OFF, DROP_EXISTING = OFF, ONLINE = OFF, FILLFACTOR = 60, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [psPartition_LastUpdated]([LastUpdated])
+GO
+SET ANSI_PADDING ON
+GO
+/****** Object:  Index [IX_Rmp_Mpxn_RmpStatus]    Script Date: 16/03/2026 12:45:38 ******/
+CREATE NONCLUSTERED INDEX [IX_Rmp_Mpxn_RmpStatus] ON [dbo].[Rmp]
+(
+	[Mpxn] ASC,
+	[RmpStatus] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, DROP_EXISTING = OFF, ONLINE = OFF, FILLFACTOR = 70, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [psPartition_LastUpdated]([LastUpdated])
+GO
+SET ANSI_PADDING ON
+GO
+/****** Object:  Index [IX_Rmp_NetworkProvisionMpid_RmpStatus]    Script Date: 16/03/2026 12:45:38 ******/
+CREATE NONCLUSTERED INDEX [IX_Rmp_NetworkProvisionMpid_RmpStatus] ON [dbo].[Rmp]
+(
+	[NetworkProvisionMpid] ASC,
+	[RmpStatus] ASC
+)
+INCLUDE([NetworkProvisionRole]) WITH (STATISTICS_NORECOMPUTE = OFF, DROP_EXISTING = OFF, ONLINE = OFF, FILLFACTOR = 80, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [psPartition_LastUpdated]([LastUpdated])
+GO
+ALTER TABLE [dbo].[Company] ADD  CONSTRAINT [DF_Company_RecordCreatedOn]  DEFAULT (getdate()) FOR [RecordCreatedOn]
+GO
+ALTER TABLE [dbo].[Registration] ADD  CONSTRAINT [DF_Registration_RecordCreatedOn]  DEFAULT (getdate()) FOR [RecordCreatedOn]
+GO
+ALTER TABLE [dbo].[RegistrationLink] ADD  CONSTRAINT [DF_RegistrationLink_RecordCreatedOn]  DEFAULT (getdate()) FOR [RecordCreatedOn]
+GO
+ALTER TABLE [dbo].[RegistrationRequest] ADD  CONSTRAINT [DF_RegistrationRequest_RecordCreatedOn]  DEFAULT (getdate()) FOR [RecordCreatedOn]
+GO
+ALTER TABLE [dbo].[RelAddress] ADD  CONSTRAINT [DF_RelAddress_Created]  DEFAULT (getdate()) FOR [Created]
+GO
+ALTER TABLE [dbo].[RetailMarket] ADD  CONSTRAINT [DF_RetailMarket_RecordCreatedOn]  DEFAULT (getdate()) FOR [RecordCreatedOn]
+GO
+ALTER TABLE [dbo].[Rmp] ADD  CONSTRAINT [DF_Rmp_RecordCreatedOn]  DEFAULT (getdate()) FOR [RecordCreatedOn]
+GO
+ALTER TABLE [dbo].[Uprn] ADD  CONSTRAINT [DF_Uprn_Created]  DEFAULT (getdate()) FOR [Created]
+GO
+ALTER TABLE [dbo].[UprnAddress] ADD  CONSTRAINT [DF_UprnAddress_Created]  DEFAULT (getdate()) FOR [Created]
+GO
+ALTER TABLE [dbo].[Company]  WITH CHECK ADD  CONSTRAINT [FK_Company_OrchestrationAuditKey] FOREIGN KEY([OrchestrationAuditKey])
+REFERENCES [dbo].[OrchestrationAudit] ([OrchestrationAuditKey])
+GO
+ALTER TABLE [dbo].[Company] CHECK CONSTRAINT [FK_Company_OrchestrationAuditKey]
+GO
+ALTER TABLE [dbo].[Registration]  WITH CHECK ADD  CONSTRAINT [FK_Registration_OrchestrationAuditKey] FOREIGN KEY([OrchestrationAuditKey])
+REFERENCES [dbo].[OrchestrationAudit] ([OrchestrationAuditKey])
+GO
+ALTER TABLE [dbo].[Registration] CHECK CONSTRAINT [FK_Registration_OrchestrationAuditKey]
+GO
+ALTER TABLE [dbo].[RegistrationLink]  WITH CHECK ADD  CONSTRAINT [FK_RegistrationLink_OrchestrationAuditKey] FOREIGN KEY([OrchestrationAuditKey])
+REFERENCES [dbo].[OrchestrationAudit] ([OrchestrationAuditKey])
+GO
+ALTER TABLE [dbo].[RegistrationLink] CHECK CONSTRAINT [FK_RegistrationLink_OrchestrationAuditKey]
+GO
+ALTER TABLE [dbo].[RegistrationRequest]  WITH CHECK ADD  CONSTRAINT [FK_RegistrationRequest_OrchestrationAuditKey] FOREIGN KEY([OrchestrationAuditKey])
+REFERENCES [dbo].[OrchestrationAudit] ([OrchestrationAuditKey])
+GO
+ALTER TABLE [dbo].[RegistrationRequest] CHECK CONSTRAINT [FK_RegistrationRequest_OrchestrationAuditKey]
+GO
+ALTER TABLE [dbo].[RelAddress]  WITH CHECK ADD  CONSTRAINT [FK_RelAddress_AddressSourceKey] FOREIGN KEY([AddressSourceKey])
+REFERENCES [dbo].[AddressSource] ([AddressSourceKey])
+GO
+ALTER TABLE [dbo].[RelAddress] CHECK CONSTRAINT [FK_RelAddress_AddressSourceKey]
+GO
+ALTER TABLE [dbo].[RelAddress]  WITH CHECK ADD  CONSTRAINT [FK_RelAddress_UprnKey] FOREIGN KEY([UprnKey])
+REFERENCES [dbo].[Uprn] ([UprnKey])
+GO
+ALTER TABLE [dbo].[RelAddress] CHECK CONSTRAINT [FK_RelAddress_UprnKey]
+GO
+ALTER TABLE [dbo].[RetailMarket]  WITH CHECK ADD  CONSTRAINT [FK_RetailMarket_OrchestrationAuditKey] FOREIGN KEY([OrchestrationAuditKey])
+REFERENCES [dbo].[OrchestrationAudit] ([OrchestrationAuditKey])
+GO
+ALTER TABLE [dbo].[RetailMarket] CHECK CONSTRAINT [FK_RetailMarket_OrchestrationAuditKey]
+GO
+ALTER TABLE [dbo].[Rmp]  WITH CHECK ADD  CONSTRAINT [FK_Rmp_OrchestrationAuditKey] FOREIGN KEY([OrchestrationAuditKey])
+REFERENCES [dbo].[OrchestrationAudit] ([OrchestrationAuditKey])
+GO
+ALTER TABLE [dbo].[Rmp] CHECK CONSTRAINT [FK_Rmp_OrchestrationAuditKey]
+GO
+ALTER TABLE [dbo].[UprnAddress]  WITH CHECK ADD  CONSTRAINT [FK_UprnAddress_AddressSourceKey] FOREIGN KEY([AddressSourceKey])
+REFERENCES [dbo].[AddressSource] ([AddressSourceKey])
+GO
+ALTER TABLE [dbo].[UprnAddress] CHECK CONSTRAINT [FK_UprnAddress_AddressSourceKey]
+GO
+ALTER TABLE [dbo].[UprnAddress]  WITH CHECK ADD  CONSTRAINT [FK_UprnAddress_RelAddressKey] FOREIGN KEY([RelAddressKey])
+REFERENCES [dbo].[RelAddress] ([RelAddressKey])
+GO
+ALTER TABLE [dbo].[UprnAddress] CHECK CONSTRAINT [FK_UprnAddress_RelAddressKey]
+GO
+ALTER TABLE [dbo].[UprnAddress]  WITH CHECK ADD  CONSTRAINT [FK_UprnAddress_UprnKey] FOREIGN KEY([UprnKey])
+REFERENCES [dbo].[Uprn] ([UprnKey])
+GO
+ALTER TABLE [dbo].[UprnAddress] CHECK CONSTRAINT [FK_UprnAddress_UprnKey]
+GO
+ALTER TABLE [dbo].[Company]  WITH CHECK ADD  CONSTRAINT [CK_Company_JsonData] CHECK  ((isjson([JsonData])>(0)))
+GO
+ALTER TABLE [dbo].[Company] CHECK CONSTRAINT [CK_Company_JsonData]
+GO
+ALTER TABLE [dbo].[Registration]  WITH CHECK ADD  CONSTRAINT [CK_Registration_JsonData] CHECK  ((isjson([JsonData])>(0)))
+GO
+ALTER TABLE [dbo].[Registration] CHECK CONSTRAINT [CK_Registration_JsonData]
+GO
+ALTER TABLE [dbo].[RegistrationRequest]  WITH CHECK ADD  CONSTRAINT [CK_RegistrationRequest_JsonData] CHECK  ((isjson([JsonData])>(0)))
+GO
+ALTER TABLE [dbo].[RegistrationRequest] CHECK CONSTRAINT [CK_RegistrationRequest_JsonData]
+GO
+ALTER TABLE [dbo].[RetailMarket]  WITH CHECK ADD  CONSTRAINT [CK_RetailMarket_JsonData] CHECK  ((isjson([JsonData])>(0)))
+GO
+ALTER TABLE [dbo].[RetailMarket] CHECK CONSTRAINT [CK_RetailMarket_JsonData]
+GO
+ALTER TABLE [dbo].[Rmp]  WITH CHECK ADD  CONSTRAINT [CK_Rmp_JsonData] CHECK  ((isjson([JsonData])>(0)))
+GO
+ALTER TABLE [dbo].[Rmp] CHECK CONSTRAINT [CK_Rmp_JsonData]
+GO

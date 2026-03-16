@@ -1,0 +1,154 @@
+param()
+
+# Authenticate using Managed Identity
+Connect-AzAccount -Identity | Out-Null
+
+# Get access token for Azure SQL
+$token = (Get-AzAccessToken -ResourceUrl "https://database.windows.net/").Token
+
+$serverName = "sqlsvr-css-reporting-pre-uks.database.windows.net"
+$databaseName = "reporting"
+$connectionString = "Server=tcp:$serverName,1433;Initial Catalog=$databaseName;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+
+function Invoke-SqlQuery {
+    param(
+        [string]$Query,
+        [System.Data.SqlClient.SqlConnection]$Connection
+    )
+    $cmd = $Connection.CreateCommand()
+    $cmd.CommandText = $Query
+    $cmd.CommandTimeout = 300
+    $adapter = New-Object System.Data.SqlClient.SqlDataAdapter $cmd
+    $dataset = New-Object System.Data.DataSet
+    $adapter.Fill($dataset) | Out-Null
+    return $dataset.Tables[0]
+}
+
+function Invoke-SqlNonQuery {
+    param(
+        [string]$Query,
+        [System.Data.SqlClient.SqlConnection]$Connection
+    )
+    $cmd = $Connection.CreateCommand()
+    $cmd.CommandText = $Query
+    $cmd.CommandTimeout = 3600
+    $cmd.ExecuteNonQuery() | Out-Null
+}
+
+# Open connection
+$connection = New-Object System.Data.SqlClient.SqlConnection $connectionString
+$connection.AccessToken = $token
+$connection.Open()
+
+Write-Output "Connected to $databaseName on $serverName"
+Write-Output "=================================================="
+
+# Get indexes eligible for REORGANIZE (10-30% fragmentation, page_count >= 1000)
+$fragQuery = @"
+SELECT
+    OBJECT_SCHEMA_NAME(i.object_id)     AS schema_name,
+    OBJECT_NAME(i.object_id)            AS table_name,
+    i.name                              AS index_name,
+    s.avg_fragmentation_in_percent,
+    s.page_count
+FROM sys.dm_db_index_physical_stats(DB_ID(), NULL, NULL, NULL, 'LIMITED') s
+INNER JOIN sys.indexes i
+    ON i.object_id = s.object_id
+    AND i.index_id = s.index_id
+WHERE s.avg_fragmentation_in_percent BETWEEN 10 AND 30
+AND s.page_count >= 1000
+AND i.index_id > 0
+ORDER BY s.avg_fragmentation_in_percent DESC
+"@
+
+Write-Output "Scanning index fragmentation..."
+$indexes = Invoke-SqlQuery -Query $fragQuery -Connection $connection
+
+if ($indexes.Rows.Count -eq 0) {
+    Write-Output "No indexes found requiring REORGANIZE (between 10-30% fragmentation)."
+} else {
+    Write-Output "Found $($indexes.Rows.Count) index(es) to REORGANIZE."
+    Write-Output "--------------------------------------------------"
+
+    foreach ($row in $indexes.Rows) {
+        $schema    = $row.schema_name
+        $table     = $row.table_name
+        $index     = $row.index_name
+        $fragBefore = [math]::Round($row.avg_fragmentation_in_percent, 2)
+        $pages     = $row.page_count
+
+        Write-Output "Processing: [$schema].[$table] -> [$index]"
+        Write-Output "  Fragmentation before : $fragBefore%  |  Pages: $pages"
+
+        try {
+            $reorgSql = "ALTER INDEX [$index] ON [$schema].[$table] REORGANIZE;"
+            Invoke-SqlNonQuery -Query $reorgSql -Connection $connection
+            Write-Output "  REORGANIZE completed."
+        } catch {
+            Write-Output "  ERROR during REORGANIZE: $_"
+            continue
+        }
+
+        # Post-reorg fragmentation check for this specific index
+        $postQuery = @"
+SELECT
+    s.avg_fragmentation_in_percent,
+    s.page_count
+FROM sys.dm_db_index_physical_stats(DB_ID(), OBJECT_ID('[$schema].[$table]'), NULL, NULL, 'LIMITED') s
+INNER JOIN sys.indexes i
+    ON i.object_id = s.object_id
+    AND i.index_id = s.index_id
+WHERE i.name = '$index'
+AND s.page_count >= 1000
+"@
+        $postResult = Invoke-SqlQuery -Query $postQuery -Connection $connection
+
+        if ($postResult.Rows.Count -gt 0) {
+            $fragAfter = [math]::Round($postResult.Rows[0].avg_fragmentation_in_percent, 2)
+            Write-Output "  Fragmentation after  : $fragAfter%"
+        } else {
+            Write-Output "  Fragmentation after  : unable to retrieve (index may have been skipped by DMV)"
+        }
+
+        Write-Output "--------------------------------------------------"
+    }
+}
+
+# Final full fragmentation status across all indexes >= 1000 pages
+Write-Output ""
+Write-Output "=================================================="
+Write-Output "FINAL INDEX FRAGMENTATION STATUS (post-maintenance)"
+Write-Output "=================================================="
+
+$finalQuery = @"
+SELECT
+    OBJECT_SCHEMA_NAME(i.object_id)     AS schema_name,
+    OBJECT_NAME(i.object_id)            AS table_name,
+    i.name                              AS index_name,
+    s.avg_fragmentation_in_percent,
+    s.page_count,
+    CASE
+        WHEN s.avg_fragmentation_in_percent > 30  THEN 'REBUILD NEEDED'
+        WHEN s.avg_fragmentation_in_percent > 10  THEN 'REORGANIZE NEEDED'
+        ELSE 'HEALTHY'
+    END AS status
+FROM sys.dm_db_index_physical_stats(DB_ID(), NULL, NULL, NULL, 'LIMITED') s
+INNER JOIN sys.indexes i
+    ON i.object_id = s.object_id
+    AND i.index_id = s.index_id
+WHERE s.page_count >= 1000
+AND i.index_id > 0
+ORDER BY s.avg_fragmentation_in_percent DESC
+"@
+
+$finalStatus = Invoke-SqlQuery -Query $finalQuery -Connection $connection
+
+foreach ($row in $finalStatus.Rows) {
+    $frag   = [math]::Round($row.avg_fragmentation_in_percent, 2)
+    $status = $row.status
+    Write-Output "[$($row.schema_name)].[$($row.table_name)] -> [$($row.index_name)] | $frag% | Pages: $($row.page_count) | $status"
+}
+
+$connection.Close()
+Write-Output ""
+Write-Output "Index maintenance job completed."
