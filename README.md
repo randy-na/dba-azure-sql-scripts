@@ -7,128 +7,58 @@
 Each maintenance cadence has its own folder. Every query is a separate file, numbered for run order.
 
 ```
-dba-azure-sql-scripts/├── daily/│   ├── 01_dtu_snapshot.sql│   ├── 02_active_sessions_blocking.sql│   ├── 03_index_fragmentation_check.sql│   ├── 04_update_statistics.sql│   └── 05_error_log_check.sql├── weekly/│   ├── 01_index_maintenance.sql│   ├── 02_update_stats.sql│   ├── 03_unused_indexes.sql│   ├── 04_top_cpu_queries.sql│   └── 05_dtu_trend_7day.sql└── monthly/    ├── 01_database_size.sql    ├── 02_table_space_usage.sql    ├── 03_dtu_trend_30day.sql    ├── 04_unused_tables.sql    ├── 05_missing_index_recommendations.sql    └── 06_duplicate_indexes.sql
+dba-azure-sql-scripts/
+├── daily/
+│   ├── 01_dtu_snapshot.sql
+│   ├── 02_active_sessions_blocking.sql
+│   ├── 03_index_fragmentation_check.sql
+│   ├── 04_update_statistics.sql
+│   └── 05_error_log_check.sql
+├── weekly/
+│   ├── 01_index_maintenance.sql
+│   ├── 02_update_stats.sql
+│   ├── 03_unused_indexes.sql
+│   ├── 04_top_cpu_queries.sql
+│   └── 05_dtu_trend_7day.sql
+└── monthly/
+    ├── 01_database_size.sql
+    ├── 02_table_space_usage.sql
+    ├── 03_dtu_trend_30day.sql
+    ├── 04_unused_tables.sql
+    ├── 05_missing_index_recommendations.sql
+    └── 06_duplicate_indexes.sql
 ```
 
 ### Daily Scripts
 
-File
-
-Description
-
-Run On
-
-`01_dtu_snapshot.sql`
-
-Current DTU consumption (CPU / IO / Log %)
-
-Primary
-
-`02_active_sessions_blocking.sql`
-
-Active sessions and blocking chains
-
-Primary
-
-`03_index_fragmentation_check.sql`
-
-Quick fragmentation scan (LIMITED mode)
-
-Primary
-
-`04_update_statistics.sql`
-
-Update stats on stale tables only
-
-Primary ONLY
-
-`05_error_log_check.sql`
-
-Error log check — last 24 hours
-
-**master** DB
+| File | Description | Run On |
+|---|---|---|
+| `01_dtu_snapshot.sql` | Current DTU consumption (CPU / IO / Log %) | Primary |
+| `02_active_sessions_blocking.sql` | Active sessions and blocking chains | Primary |
+| `03_index_fragmentation_check.sql` | Quick fragmentation scan (LIMITED mode) | Primary |
+| `04_update_statistics.sql` | Update stats on stale tables only | Primary ONLY |
+| `05_error_log_check.sql` | Error log check — last 24 hours | **master** DB |
 
 ### Weekly Scripts
 
-File
-
-Description
-
-Run On
-
-`01_index_maintenance.sql`
-
-REORGANIZE > 10%, REBUILD > 30%
-
-Primary ONLY
-
-`02_update_stats.sql`
-
-Full `sp_updatestats`
-
-Primary ONLY
-
-`03_unused_indexes.sql`
-
-Indexes with no seeks/scans/lookups
-
-Primary
-
-`04_top_cpu_queries.sql`
-
-Top 10 queries by total CPU
-
-Primary
-
-`05_dtu_trend_7day.sql`
-
-Hourly DTU max — last 7 days
-
-Primary
+| File | Description | Run On |
+|---|---|---|
+| `01_index_maintenance.sql` | REORGANIZE > 10%, REBUILD > 30% | Primary ONLY |
+| `02_update_stats.sql` | Full `sp_updatestats` | Primary ONLY |
+| `03_unused_indexes.sql` | Indexes with no seeks/scans/lookups | Primary |
+| `04_top_cpu_queries.sql` | Top 10 queries by total CPU | Primary |
+| `05_dtu_trend_7day.sql` | Hourly DTU max — last 7 days | Primary |
 
 ### Monthly Scripts
 
-File
-
-Description
-
-Run On
-
-`01_database_size.sql`
-
-Data and log file size
-
-Primary
-
-`02_table_space_usage.sql`
-
-Top 20 tables by total size
-
-Primary
-
-`03_dtu_trend_30day.sql`
-
-Daily DTU max/avg — last 30 days
-
-Primary
-
-`04_unused_tables.sql`
-
-Tables with no user reads in stats cache
-
-Primary
-
-`05_missing_index_recommendations.sql`
-
-Missing index recommendations (score > 1000)
-
-Primary
-
-`06_duplicate_indexes.sql`
-
-Duplicate / overlapping indexes
-
-Primary
+| File | Description | Run On |
+|---|---|---|
+| `01_database_size.sql` | Data and log file size | Primary |
+| `02_table_space_usage.sql` | Top 20 tables by total size | Primary |
+| `03_dtu_trend_30day.sql` | Daily DTU max/avg — last 30 days | Primary |
+| `04_unused_tables.sql` | Tables with no user reads in stats cache | Primary |
+| `05_missing_index_recommendations.sql` | Missing index recommendations (score > 1000) | Primary |
+| `06_duplicate_indexes.sql` | Duplicate / overlapping indexes | Primary |
 
 ---
 
@@ -174,7 +104,13 @@ If this consistently exceeds **80–85%**, consider scaling up your Premium tier
 Run on the **primary** to check replication health:
 
 ```sql
-SELECT    r.partner_server,    r.partner_database,    r.role_desc,    r.replication_state_desc,    r.replication_lag_secFROM sys.dm_geo_replication_link_status r;
+SELECT
+    r.partner_server,
+    r.partner_database,
+    r.role_desc,
+    r.replication_state_desc,
+    r.replication_lag_sec
+FROM sys.dm_geo_replication_link_status r;
 ```
 
 A lag above **30 seconds** on a reporting workload warrants investigation.
@@ -189,22 +125,9 @@ A lag above **30 seconds** on a reporting workload warrants investigation.
 
 The following will fail or produce misleading results on the read-only secondary:
 
-Script
-
-Reason
-
-`weekly/01_index_maintenance.sql`
-
-Write operation — blocked by read-only guard
-
-`weekly/02_update_stats.sql`
-
-Write operation — will error
-
-`daily/04_update_statistics.sql`
-
-Write operation — will error
-
-`monthly/03_dtu_trend_30day.sql`
-
-`sys.dm_db_resource_stats` not replicated
+| Script | Reason |
+|---|---|
+| `weekly/01_index_maintenance.sql` | Write operation — blocked by read-only guard |
+| `weekly/02_update_stats.sql` | Write operation — will error |
+| `daily/04_update_statistics.sql` | Write operation — will error |
+| `monthly/03_dtu_trend_30day.sql` | `sys.dm_db_resource_stats` not replicated |
