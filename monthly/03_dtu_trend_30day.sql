@@ -1,6 +1,6 @@
 -- ============================================================
 -- Monthly | 03 - DTU Consumption Trend (daily max, last 30 days)
--- Run on: Primary (UK South)
+-- Run on: Primary
 -- NOTE: sys.dm_db_resource_stats only retains ~1 hour of data.
 -- This query will return limited rows without a dbo.dtu_history
 -- snapshot table in place. See README for recommendation.

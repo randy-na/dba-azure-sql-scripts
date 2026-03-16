@@ -1,6 +1,6 @@
 -- ============================================================
 -- Weekly | 04 - Top 10 Queries by Total CPU
--- Run on: Primary (UK South)
+-- Run on: Primary
 -- Use results to identify candidates for query tuning.
 -- If avg_cpu_us is high and DTU % consistently > 80, consider
 -- query optimisation before scaling up the Premium tier.

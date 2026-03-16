@@ -1,6 +1,6 @@
 -- ============================================================
 -- Weekly | 01 - Index Maintenance (REORGANIZE > 10%, REBUILD > 30%)
--- Run on: Primary (UK South) ONLY
+-- Run on: Primary ONLY
 -- ONLINE = ON is supported on Premium tier.
 -- After a failover, re-run this on the new primary —
 -- sys.dm_db_index_usage_stats resets on failover.

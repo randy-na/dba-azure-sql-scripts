@@ -1,6 +1,6 @@
 -- ============================================================
 -- Daily | 02 - Active Sessions and Blocking
--- Run on: Primary (UK South)
+-- Run on: Primary
 -- ============================================================
 SELECT
     r.session_id,

@@ -1,6 +1,6 @@
 -- ============================================================
 -- Monthly | 01 - Database Size and Space Usage
--- Run on: Primary (UK South)
+-- Run on: Primary
 -- ============================================================
 SELECT
     SUM(CASE WHEN type_desc = 'ROWS' THEN size END) * 8 / 1024.0  AS data_size_mb,

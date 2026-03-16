@@ -1,7 +1,7 @@
 -- ============================================================
 -- Weekly | 03 - Unused Indexes
--- Run on: Primary (UK South)
--- REVIEW before dropping — stats reset on service restart and failover.
+-- Run on: Primary
+-- REVIEW before dropping - stats reset on service restart and failover.
 -- Allow at least 1 week of workload post-failover before acting.
 -- ============================================================
 SELECT
