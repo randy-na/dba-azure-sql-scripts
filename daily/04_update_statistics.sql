@@ -6,12 +6,17 @@
 -- ============================================================
 DECLARE @sql NVARCHAR(MAX) = N'';
 
-SELECT @sql += N'UPDATE STATISTICS ' + QUOTENAME(SCHEMA_NAME(t.schema_id))
-             + N'.' + QUOTENAME(t.name) + N' WITH SAMPLE 30 PERCENT;' + CHAR(10)
-FROM sys.tables t
-JOIN sys.stats s ON t.object_id = s.object_id
-CROSS APPLY sys.dm_db_stats_properties(s.object_id, s.stats_id) sp
-WHERE sp.modification_counter > 0
-  AND (sp.rows_sampled * 1.0 / NULLIF(sp.rows, 0)) < 0.8;
+SELECT @sql += N'UPDATE STATISTICS ' + QUOTENAME(stale_tables.schema_name)
+             + N'.' + QUOTENAME(stale_tables.table_name) + N' WITH SAMPLE 30 PERCENT;' + CHAR(10)
+FROM (
+    SELECT DISTINCT
+        SCHEMA_NAME(t.schema_id) AS schema_name,
+        t.name AS table_name
+    FROM sys.tables t
+    JOIN sys.stats s ON t.object_id = s.object_id
+    CROSS APPLY sys.dm_db_stats_properties(s.object_id, s.stats_id) sp
+    WHERE sp.modification_counter > 0
+      AND (sp.rows_sampled * 1.0 / NULLIF(sp.rows, 0)) < 0.8
+) AS stale_tables;
 
 EXEC sp_executesql @sql;
